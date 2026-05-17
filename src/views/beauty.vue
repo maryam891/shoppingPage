@@ -16,7 +16,7 @@
             <p>Rating {{ Math.floor(product.rating) }}</p>
             <div class="star-row">
                 <i v-for="star in stars" :key="star"
-                    :class="star <= product.rating ? 'pi pi-star-fill' : (star - 0.5 <= product.rating ? 'pi-star-half-fil' : 'pi pi-star')"></i>
+                    :class="star <= product.rating ? 'pi pi-star-fill' : 'pi pi-star'"></i>
             </div>
 
             <input type="button" value="Add to cart" id="addToCartBtn" @click="addToCart">
