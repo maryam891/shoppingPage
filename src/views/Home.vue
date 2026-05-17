@@ -7,7 +7,7 @@
     </div>
     <div class="bestSellersContainer">
       <img :src="bestSellers" id="bestSellers">
-      <p style="position: absolute; bottom:-13%; left: 47%; color:palevioletred; font-size: 22px; ">Best sellers</p>
+      <p style="position: absolute; bottom:-20%; left: 47%; color:palevioletred; font-size: 22px; ">Best sellers</p>
     </div>
     <div class="beautyAndAccContainer" @click="navigateToBeautyPage">
       <img :src="beauty" id="beauty">
@@ -29,6 +29,7 @@ export default {
 
     };
   },
+  emits: ["value-updated"],
   //navigation to beauty page
   methods: {
     navigateToBeautyPage() {
@@ -72,5 +73,12 @@ export default {
   width: 350px;
   border-radius: 7px;
   box-shadow: 7px 10px 20px rgba(100, 99, 99, 0.256);
+  transition: transform 0.25s ease;
+}
+
+#newArrivalsImg:hover,
+#bestSellers:hover,
+#beauty:hover {
+  transform: scale(1.1);
 }
 </style>
